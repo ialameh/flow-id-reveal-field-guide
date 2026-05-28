@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14">
+  <defs>
+    <filter id="s" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="700" fill="#f8fafc"/>
+
+  <text x="550" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Flow ID Reveal — architecture</text>
+  <text x="550" y="60" text-anchor="middle" font-size="13" fill="#64748b">Manifest V3 extension: 4 components, message-routed, no remote code</text>
+
+  <!-- Salesforce tab box -->
+  <rect x="40" y="100" width="320" height="220" rx="12" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" filter="url(#s)"/>
+  <text x="200" y="130" text-anchor="middle" font-weight="700" fill="#1e293b">Salesforce tab</text>
+  <text x="200" y="148" text-anchor="middle" font-size="11" fill="#475569">*.lightning.force.com / *.my.salesforce.com</text>
+
+  <!-- Content script -->
+  <rect x="70" y="170" width="260" height="60" rx="8" fill="#fff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="200" y="195" text-anchor="middle" font-weight="600" fill="#1e293b">Content script (content.js)</text>
+  <text x="200" y="215" text-anchor="middle" font-size="11" fill="#475569">DOM scan, shadow-root traversal</text>
+
+  <!-- Web page DOM -->
+  <rect x="70" y="245" width="260" height="60" rx="8" fill="#dbeafe" stroke="#60a5fa" stroke-width="1"/>
+  <text x="200" y="270" text-anchor="middle" font-weight="600" fill="#1e293b">Flow Builder LWC + DOM</text>
+  <text x="200" y="290" text-anchor="middle" font-size="11" fill="#475569">Lightning shadow roots, page state</text>
+
+  <!-- Background service worker -->
+  <rect x="420" y="170" width="280" height="120" rx="10" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2" filter="url(#s)"/>
+  <text x="560" y="195" text-anchor="middle" font-weight="700" fill="#1e293b">Background service worker</text>
+  <text x="560" y="213" text-anchor="middle" font-size="11" fill="#475569">background.js — privileged surface</text>
+  <text x="560" y="237" text-anchor="middle" font-size="11" font-family="ui-monospace,monospace" fill="#5b21b6">chrome.cookies.get()</text>
+  <text x="560" y="253" text-anchor="middle" font-size="11" font-family="ui-monospace,monospace" fill="#5b21b6">chrome.storage.local</text>
+  <text x="560" y="270" text-anchor="middle" font-size="11" font-family="ui-monospace,monospace" fill="#5b21b6">cross-host fetch + SOAP</text>
+
+  <!-- Side panel -->
+  <rect x="760" y="170" width="280" height="200" rx="10" fill="#fde68a" stroke="#d97706" stroke-width="2" filter="url(#s)"/>
+  <text x="900" y="195" text-anchor="middle" font-weight="700" fill="#1e293b">Side panel UI</text>
+  <text x="900" y="213" text-anchor="middle" font-size="11" fill="#475569">sidepanel.html + sidepanel.js</text>
+  <text x="900" y="240" text-anchor="middle" font-size="12" fill="#1e293b">Six tabs:</text>
+  <text x="900" y="260" text-anchor="middle" font-size="11" fill="#78350f">Scan · Compare · Patch</text>
+  <text x="900" y="278" text-anchor="middle" font-size="11" fill="#78350f">Inspect · Audit · Export</text>
+  <text x="900" y="305" text-anchor="middle" font-size="11" fill="#475569">All UI lives here.</text>
+  <text x="900" y="322" text-anchor="middle" font-size="11" fill="#475569">Talks only to background.</text>
+  <text x="900" y="345" text-anchor="middle" font-size="10" fill="#92400e" font-style="italic">"never fetches SF directly"</text>
+
+  <!-- Popup -->
+  <rect x="420" y="320" width="280" height="60" rx="8" fill="#fce7f3" stroke="#be185d" stroke-width="2" filter="url(#s)"/>
+  <text x="560" y="345" text-anchor="middle" font-weight="700" fill="#1e293b">Popup (popup.html)</text>
+  <text x="560" y="362" text-anchor="middle" font-size="11" fill="#475569">Toolbar icon launcher — open side panel</text>
+
+  <!-- Salesforce backend -->
+  <rect x="40" y="440" width="1020" height="120" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2" filter="url(#s)"/>
+  <text x="550" y="470" text-anchor="middle" font-weight="700" fill="#1e293b">Salesforce backend (your orgs)</text>
+  <text x="550" y="488" text-anchor="middle" font-size="11" fill="#475569">All API calls authenticated with session cookies from chrome.cookies</text>
+
+  <rect x="80" y="500" width="200" height="40" rx="6" fill="#fff" stroke="#16a34a"/>
+  <text x="180" y="525" text-anchor="middle" font-size="12" font-weight="600" fill="#15803d">/services/data/vNN.0/sobjects/...</text>
+
+  <rect x="300" y="500" width="200" height="40" rx="6" fill="#fff" stroke="#16a34a"/>
+  <text x="400" y="525" text-anchor="middle" font-size="12" font-weight="600" fill="#15803d">/services/data/vNN.0/tooling/...</text>
+
+  <rect x="520" y="500" width="200" height="40" rx="6" fill="#fff" stroke="#16a34a"/>
+  <text x="620" y="525" text-anchor="middle" font-size="12" font-weight="600" fill="#15803d">/services/Soap/m/NN.0 (deploy)</text>
+
+  <rect x="740" y="500" width="200" height="40" rx="6" fill="#fff" stroke="#16a34a"/>
+  <text x="840" y="525" text-anchor="middle" font-size="12" font-weight="600" fill="#15803d">my.salesforce.com sid cookies</text>
+
+  <!-- Arrows -->
+  <!-- Content script ↔ background -->
+  <line x1="330" y1="200" x2="415" y2="200" stroke="#2563eb" stroke-width="2" marker-end="url(#arBlue)" marker-start="url(#arBlue)"/>
+  <text x="372" y="190" text-anchor="middle" font-size="10" fill="#1e40af">chrome.runtime</text>
+  <text x="372" y="218" text-anchor="middle" font-size="10" fill="#1e40af">.sendMessage</text>
+
+  <!-- Side panel ↔ background -->
+  <line x1="755" y1="200" x2="705" y2="200" stroke="#2563eb" stroke-width="2" marker-end="url(#arBlue)" marker-start="url(#arBlue)"/>
+  <text x="730" y="190" text-anchor="middle" font-size="10" fill="#1e40af">sendMessage</text>
+
+  <!-- Popup → background -->
+  <line x1="560" y1="295" x2="560" y2="315" stroke="#2563eb" stroke-width="2" marker-end="url(#arBlue)"/>
+
+  <!-- Background → Salesforce backend -->
+  <line x1="560" y1="295" x2="560" y2="435" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="580" y="365" font-size="11" fill="#15803d">sfFetch + SOAP</text>
+  <text x="580" y="385" font-size="11" fill="#15803d">Authorization: Bearer sid</text>
+
+  <!-- Content script → Salesforce backend (via background) -->
+  <line x1="200" y1="305" x2="200" y2="435" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="210" y="370" font-size="10" fill="#64748b">(via bg)</text>
+
+  <!-- Legend -->
+  <rect x="40" y="585" width="1020" height="100" rx="8" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="60" y="610" font-weight="700" fill="#1e293b">Key</text>
+  <line x1="60" y1="625" x2="100" y2="625" stroke="#2563eb" stroke-width="2" marker-end="url(#arBlue)" marker-start="url(#arBlue)"/>
+  <text x="115" y="630" font-size="11" fill="#475569">Internal extension message routing</text>
+  <line x1="350" y1="625" x2="390" y2="625" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="405" y="630" font-size="11" fill="#475569">Authenticated REST/Tooling/SOAP fetch</text>
+  <line x1="660" y1="625" x2="700" y2="625" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="715" y="630" font-size="11" fill="#475569">Indirect (must go through background)</text>
+  <text x="60" y="660" font-size="11" fill="#64748b" font-style="italic">Background is the only component allowed to read cookies, write storage, and fetch SF endpoints from chrome-extension origin.</text>
+  <text x="60" y="678" font-size="11" fill="#64748b" font-style="italic">Side panel and content script ask background for every API operation. Strict separation enforced by MV3.</text>
+</svg>

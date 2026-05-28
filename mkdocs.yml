@@ -1,0 +1,114 @@
+site_name: Flow ID Reveal Field Guide
+site_description: Practical handbook for cross-org Salesforce Flow Builder Id management with the Flow ID Reveal Chrome extension
+site_url: https://ialameh.github.io/flow-id-reveal-field-guide/
+repo_url: https://github.com/ialameh/flow-id-reveal-field-guide
+repo_name: ialameh/flow-id-reveal-field-guide
+edit_uri: edit/main/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+
+nav:
+  - Home: index.md
+  - Quickstart: 00-quickstart.md
+  - Foundations:
+      - Mental model: 01-mental-model.md
+      - Architecture: 02-architecture.md
+      - Session model: 03-session-model.md
+      - API version negotiation: 04-api-version-negotiation.md
+      - Salesforce Id taxonomy: 05-id-taxonomy.md
+  - Operations:
+      - Scan tab: 06-scan-tab.md
+      - Compare tab: 07-compare-tab.md
+      - Patch tab: 08-patch-tab.md
+      - Inspect tab: 09-inspect-tab.md
+      - Audit tab: 10-audit-tab.md
+      - Export tab: 11-export-tab.md
+  - Design and Engineering:
+      - Cross-org deploy workflow: 12-cross-org-deploy.md
+      - Form-bound flow constraints: 13-form-bound-flow-constraints.md
+      - Patch and Repoint safety: 14-patch-and-repoint-safety.md
+      - CMS Form helper deep dive: 15-cms-form-helper.md
+      - Pre-deploy dry-run + ZIP builder: 16-predeploy-and-zip.md
+      - Auto-pin to Custom Metadata: 17-auto-pin-to-cmt.md
+  - Reference:
+      - Troubleshooting: 18-troubleshooting.md
+      - Anti-patterns: 19-anti-patterns.md
+      - Performance tips: 20-performance.md
+      - Privacy and security posture: 21-privacy-and-security.md
+      - FAQ: 22-faq.md
+  - Cookbook: cookbook/README.md
+  - Templates: templates/README.md
+  - Case Studies: case-studies/README.md
+  - Glossary: 23-glossary.md
+  - References: REFERENCES.md
+  - Verification: VERIFICATION.md
+  - Changelog: CHANGELOG.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ialameh

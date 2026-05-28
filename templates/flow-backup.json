@@ -1,0 +1,25 @@
+{
+  "backedUpAt": "2026-05-28T03:14:59.000Z",
+  "flowRecord": {
+    "Id": "301WG00001DXvoVYAT",
+    "MasterLabel": "General Enquiry - AU Form Handler v1 Flow",
+    "VersionNumber": 8,
+    "Status": "Draft"
+  },
+  "origin": "https://yourdomain.sandbox.lightning.force.com",
+  "metadata": {
+    "apiVersion": 67.0,
+    "label": "General Enquiry - AU Form Handler v1 Flow",
+    "processType": "Journey",
+    "status": "Draft",
+    "start": {
+      "triggerType": "FormSubmissionEvent",
+      "form": "marketing--Default_Content_Workspace.sfdc_cms__formHandler--<contentkey>"
+    },
+    "actionCalls": [],
+    "decisions": [],
+    "recordCreates": [],
+    "recordLookups": [],
+    "recordUpdates": []
+  }
+}

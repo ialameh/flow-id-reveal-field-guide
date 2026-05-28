@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="600" fill="#f8fafc"/>
+
+  <text x="550" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Cross-org Id rot — the lifecycle</text>
+  <text x="550" y="60" text-anchor="middle" font-size="13" fill="#64748b">From hidden Id in Flow Builder to deploy failure to extension-driven fix</text>
+
+  <!-- 1. Flow Builder hides the Id -->
+  <rect x="40" y="100" width="240" height="120" rx="10" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="130" text-anchor="middle" font-weight="700" fill="#1e293b">1. Flow Builder UI</text>
+  <text x="160" y="155" text-anchor="middle" font-size="12" fill="#475569">Picklist shows "Marketing"</text>
+  <text x="160" y="175" text-anchor="middle" font-size="12" fill="#475569">Save bakes Id into XML</text>
+  <text x="160" y="200" text-anchor="middle" font-size="11" font-family="ui-monospace,monospace" fill="#1e40af">0XlWG0000000Ihh0AE</text>
+
+  <!-- 2. Metadata stored in source org -->
+  <rect x="340" y="100" width="240" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+  <text x="460" y="130" text-anchor="middle" font-weight="700" fill="#1e293b">2. Source org metadata</text>
+  <text x="460" y="155" text-anchor="middle" font-size="12" fill="#475569">Tooling stores the Id verbatim</text>
+  <text x="460" y="175" text-anchor="middle" font-size="12" fill="#475569">apiVersion 67.0, Status Draft</text>
+  <text x="460" y="200" text-anchor="middle" font-size="11" font-family="ui-monospace,monospace" fill="#15803d">flow.metadata.actionCalls...</text>
+
+  <!-- 3. Deploy ships bytes -->
+  <rect x="640" y="100" width="240" height="120" rx="10" fill="#fde68a" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <text x="760" y="130" text-anchor="middle" font-weight="700" fill="#1e293b">3. Deploy to target</text>
+  <text x="760" y="155" text-anchor="middle" font-size="12" fill="#475569">Gearset / Change Set / sfdx</text>
+  <text x="760" y="175" text-anchor="middle" font-size="12" fill="#475569">XML shipped as-is</text>
+  <text x="760" y="200" text-anchor="middle" font-size="11" font-family="ui-monospace,monospace" fill="#a16207">Pod code WG → WF</text>
+
+  <!-- 4. Target rejects -->
+  <rect x="940" y="100" width="120" height="120" rx="10" fill="#fce7f3" stroke="#be185d" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="135" text-anchor="middle" font-weight="700" fill="#1e293b">4. FAIL</text>
+  <text x="1000" y="160" text-anchor="middle" font-size="11" fill="#475569">"unexpected</text>
+  <text x="1000" y="175" text-anchor="middle" font-size="11" fill="#475569">error"</text>
+  <text x="1000" y="195" text-anchor="middle" font-size="11" font-family="ui-monospace,monospace" fill="#9d174d">no line / col</text>
+
+  <!-- Arrows top row -->
+  <line x1="285" y1="160" x2="335" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="585" y1="160" x2="635" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="885" y1="160" x2="935" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============ Extension intervention ============ -->
+  <text x="550" y="300" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Flow ID Reveal extension intervention</text>
+
+  <!-- Scan -->
+  <rect x="40" y="330" width="180" height="100" rx="10" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="360" text-anchor="middle" font-weight="700" fill="#1e293b">Scan</text>
+  <text x="130" y="385" text-anchor="middle" font-size="12" fill="#475569">Reveal hidden Id +</text>
+  <text x="130" y="402" text-anchor="middle" font-size="12" fill="#475569">resolve to "Marketing"</text>
+
+  <!-- Compare -->
+  <rect x="240" y="330" width="180" height="100" rx="10" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="360" text-anchor="middle" font-weight="700" fill="#1e293b">Compare</text>
+  <text x="330" y="385" text-anchor="middle" font-size="12" fill="#475569">EXISTS / MISSING</text>
+  <text x="330" y="402" text-anchor="middle" font-size="12" fill="#475569">in target org</text>
+
+  <!-- Clone / Use -->
+  <rect x="440" y="330" width="180" height="100" rx="10" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="360" text-anchor="middle" font-weight="700" fill="#1e293b">Clone / Use this Id</text>
+  <text x="530" y="385" text-anchor="middle" font-size="12" fill="#475569">Get target Id</text>
+  <text x="530" y="402" text-anchor="middle" font-size="12" fill="#475569">autofill Repoint</text>
+
+  <!-- Patch -->
+  <rect x="640" y="330" width="180" height="100" rx="10" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="730" y="360" text-anchor="middle" font-weight="700" fill="#1e293b">Patch</text>
+  <text x="730" y="385" text-anchor="middle" font-size="12" fill="#475569">Repoint Apply</text>
+  <text x="730" y="402" text-anchor="middle" font-size="12" fill="#475569">or Cross-org deploy</text>
+
+  <!-- Success -->
+  <rect x="840" y="330" width="220" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="360" text-anchor="middle" font-weight="700" fill="#1e293b">Successful deploy</text>
+  <text x="950" y="385" text-anchor="middle" font-size="12" fill="#475569">Target flow Active</text>
+  <text x="950" y="402" text-anchor="middle" font-size="12" fill="#475569">with valid Ids</text>
+
+  <!-- Arrows bottom row -->
+  <line x1="225" y1="380" x2="235" y2="380" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="425" y1="380" x2="435" y2="380" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="625" y1="380" x2="635" y2="380" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="825" y1="380" x2="835" y2="380" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Legend -->
+  <rect x="40" y="480" width="1020" height="90" rx="8" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="60" y="510" font-weight="700" fill="#1e293b">Legend</text>
+  <rect x="60" y="525" width="14" height="14" fill="#bfdbfe" stroke="#3b82f6"/>
+  <text x="80" y="537" font-size="12" fill="#475569">Flow Builder UI</text>
+  <rect x="190" y="525" width="14" height="14" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="210" y="537" font-size="12" fill="#475569">Salesforce org state</text>
+  <rect x="350" y="525" width="14" height="14" fill="#fde68a" stroke="#d97706"/>
+  <text x="370" y="537" font-size="12" fill="#475569">Deploy mechanism</text>
+  <rect x="500" y="525" width="14" height="14" fill="#fce7f3" stroke="#be185d"/>
+  <text x="520" y="537" font-size="12" fill="#475569">Failure mode</text>
+  <rect x="620" y="525" width="14" height="14" fill="#ddd6fe" stroke="#7c3aed"/>
+  <text x="640" y="537" font-size="12" fill="#475569">Extension feature</text>
+  <text x="60" y="557" font-size="11" fill="#64748b" font-style="italic">Without extension: 1 → 2 → 3 → 4 (fail). With extension: 1 → 2 → Scan → Compare → Clone/Use → Patch → 3 → success.</text>
+</svg>

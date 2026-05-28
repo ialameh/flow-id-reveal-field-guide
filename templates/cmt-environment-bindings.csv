@@ -1,0 +1,8 @@
+DeveloperName,Label,Object_Type__c,Record_Id__c,Environment__c,Notes__c
+CommSubscription_Marketing,CommSubscription: Marketing,CommSubscription,0XlWG0000000Ihh0AE,SilverChef,Email opt-in for marketing comms
+CommSubscription_Marketing,CommSubscription: Marketing,CommSubscription,0XlWF0000000GrB0AU,UAT,Email opt-in for marketing comms - UAT
+CommSubscription_Marketing,CommSubscription: Marketing,CommSubscription,0XlPR0000000XYZ123,Prod,Email opt-in for marketing comms - Prod
+CommSubscriptionChannelType_Marketing_Emails,CommSubChannelType: Marketing Emails,CommSubscriptionChannelType,0eBWG00000006rp2AA,SilverChef,Email channel type
+CommSubscriptionChannelType_Marketing_Emails,CommSubChannelType: Marketing Emails,CommSubscriptionChannelType,0eBWF00000005HR2AY,UAT,Email channel type - UAT
+EngagementChannelType_Email,EngChannelType: Email,EngagementChannelType,0eFWG0000002ABN2A2,SilverChef,Email engagement channel
+EngagementChannelType_Email,EngChannelType: Email,EngagementChannelType,0eFWF000000091h2AA,UAT,Email engagement channel - UAT
