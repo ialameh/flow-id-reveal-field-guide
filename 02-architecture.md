@@ -99,8 +99,8 @@ flow-id-reveal/
 │   ├── icon-48.png    # extension card (full concept icon)
 │   └── icon-128.png   # extension card + web store (full concept icon)
 └── src/
-    ├── background.js  # service worker — all SF API calls live here
-    ├── content.js     # runs on every SF page — DOM scan + Tooling proxy
+    ├── background.js  # service worker - all SF API calls live here
+    ├── content.js     # runs on every SF page - DOM scan + Tooling proxy
     ├── popup.html     # toolbar dropdown
     ├── popup.js
     ├── sidepanel.html # six-tab side panel

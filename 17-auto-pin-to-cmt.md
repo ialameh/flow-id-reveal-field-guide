@@ -176,9 +176,9 @@ Useful as a planning document. Paste into a ticket. Use it as the blueprint for 
 
 ## v0.5 plan
 
-- One-click "Create CMT records in this org" — POSTs each suggested record to `/sobjects/Flow_Environment_Bindings__mdt/` (Tooling API supports CMT records via REST in newer versions)
-- One-click "Refactor flow to use CMT lookups" — adds the Get Records + Variable + reference rewrites to the flow JSON, applies via Tooling PATCH
-- Per-environment record manager — view all records, override values, export
+- One-click "Create CMT records in this org" - POSTs each suggested record to `/sobjects/Flow_Environment_Bindings__mdt/` (Tooling API supports CMT records via REST in newer versions)
+- One-click "Refactor flow to use CMT lookups" - adds the Get Records + Variable + reference rewrites to the flow JSON, applies via Tooling PATCH
+- Per-environment record manager - view all records, override values, export
 
 These are stretch features. The schema design is the harder problem; the API plumbing is mechanical once the schema is decided.
 

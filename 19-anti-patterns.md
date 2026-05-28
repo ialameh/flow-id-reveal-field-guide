@@ -15,7 +15,7 @@ Why this happens:
 Defenses:
 
 - The extension warns in the Apply confirm dialog. Read it.
-- Rename the Draft to "STAGING — DO NOT ACTIVATE". Visible in Setup → Flows.
+- Rename the Draft to "STAGING - DO NOT ACTIVATE". Visible in Setup → Flows.
 - Notify the team via Slack / ticket while a poisoned Draft exists.
 - Use Cross-org deploy instead, which leaves source untouched.
 
@@ -48,7 +48,7 @@ Defense:
 
 - Navigate to the Draft version in Flow Builder. URL has flowId of the Draft, e.g. `?flowId=301WG00001DXvoVYAT`.
 - Re-Scan after switching versions.
-- Use Cross-org deploy instead — it creates a new Draft in target regardless of source's Active/Draft status.
+- Use Cross-org deploy instead - it creates a new Draft in target regardless of source's Active/Draft status.
 
 ## 4. Treating the extension as a deploy tool
 
@@ -174,7 +174,7 @@ You deployed the poisoned Draft to target. Activated it in target. Then realised
 
 If you then run Repoint INVERSE in source, source Draft now has source Ids. Fine.
 
-But if you confuse yourself and accidentally run the original Repoint (forward direction) again in source, you re-poison source. Now you have a poisoned source and target is fine — opposite of where you started.
+But if you confuse yourself and accidentally run the original Repoint (forward direction) again in source, you re-poison source. Now you have a poisoned source and target is fine - opposite of where you started.
 
 Defense:
 

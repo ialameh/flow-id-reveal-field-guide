@@ -32,7 +32,7 @@ Yes. They are Chromium-based and support MV3.
 
 ## Why is my Scan returning Ids I have not used?
 
-The DOM scan picks up the org Id (`00D...`) from a `<script>` tag on every Lightning page. That's harmless — informational.
+The DOM scan picks up the org Id (`00D...`) from a `<script>` tag on every Lightning page. That's harmless - informational.
 
 If you see unfamiliar `001`, `003`, etc. Ids, they may be sample records linked from the LEX shell (e.g. recently viewed). The flow itself does not necessarily reference them. Check the host column to see where each Id was found.
 
@@ -65,8 +65,8 @@ When packaged and distributed via a private CRX, Chrome can auto-update if the m
 
 ## How do I add support for a new sObject prefix?
 
-1. Edit `src/utils/id-patterns.js` — add the prefix to `ID_PREFIX_MAP`
-2. Edit `src/content.js` — add the same prefix to the mirrored constant
+1. Edit `src/utils/id-patterns.js` - add the prefix to `ID_PREFIX_MAP`
+2. Edit `src/content.js` - add the same prefix to the mirrored constant
 3. Reload the extension
 4. Rescan
 

@@ -116,7 +116,7 @@ The same Draft-only safety rule applies: Tooling PATCH cannot write to Active ve
 | Org-pair maps | Persistent via `chrome.storage.local` (survives Chrome restart) |
 | API version override | Persistent via `chrome.storage.local` |
 | Detected API versions per host | In-memory only (service worker lifetime) |
-| Backups | Clipboard only — copy elsewhere to persist |
+| Backups | Clipboard only - copy elsewhere to persist |
 
 The extension is intentionally light on persistent state. Salesforce's REST endpoints are the source of truth. The extension is a UI on top, not a database.
 

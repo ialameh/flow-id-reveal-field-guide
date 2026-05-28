@@ -101,8 +101,8 @@ WHERE MasterLabel='<current flow label>' AND Status='Draft'
 
 against the target tab's org. Returns one of two verdicts:
 
-- **OK — no Draft collision. Deploy should land.**
-- **BLOCKED — N Draft(s) bound to this flow's name in target. Activate or delete before pushing.**
+- **OK - no Draft collision. Deploy should land.**
+- **BLOCKED - N Draft(s) bound to this flow's name in target. Activate or delete before pushing.**
 
 If BLOCKED, the next step is the Lifecycle subtab (Patch tab) in the target org's context. Activate the existing Draft, or Delete it, then re-run the check.
 

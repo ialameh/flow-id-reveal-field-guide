@@ -108,8 +108,8 @@ Columns:
 
 Filters:
 
-- **Filter by label** (text input) — substring match
-- **Status** dropdown — All, Active only, Draft only, Obsolete only, InvalidDraft only
+- **Filter by label** (text input) - substring match
+- **Status** dropdown - All, Active only, Draft only, Obsolete only, InvalidDraft only
 
 The counts line below shows `N of M flow definitions` after filtering.
 

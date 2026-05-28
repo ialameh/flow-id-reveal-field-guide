@@ -8,7 +8,7 @@ You have multiple flows in source that all reference the same set of Marketing C
 
 Building one named map and reusing it across flows saves typing and reduces typo risk.
 
-## Step 1. First flow — build the map
+## Step 1. First flow - build the map
 
 Scan the first flow. Compare against target. Fill the Repoint table via Use this Id / Clone → target as usual.
 
@@ -28,19 +28,19 @@ The map is persisted in `chrome.storage.local`. Visible at Patch → Org-pair ma
 
 Click Apply patch on the first flow. Deploy. Activate in target. (Steps from Cookbook 01.)
 
-## Step 2. Second flow — use the saved map
+## Step 2. Second flow - use the saved map
 
 Scan the second flow (a different flow that references the same Marketing Cloud Growth Ids).
 
 Side panel → Patch → Repoint → enter `silverchef-to-uat` in the map name field → click **Prefill from saved map**.
 
-The Repoint table autofills with target Ids for every source Id in the map. Rows that don't match the saved Ids stay blank — fill those manually or skip if not applicable to this flow.
+The Repoint table autofills with target Ids for every source Id in the map. Rows that don't match the saved Ids stay blank - fill those manually or skip if not applicable to this flow.
 
 Apply patch. Deploy. Activate in target.
 
 Total time on this second flow: under 5 minutes (most of it is human verification + the Apply confirm dialog).
 
-## Step 3. Third, fourth flow — same pattern
+## Step 3. Third, fourth flow - same pattern
 
 Each subsequent flow that uses the same Id set gets the prefill treatment. The map saves you from re-cloning records and re-typing pasted Ids.
 
@@ -82,9 +82,9 @@ Now everyone on the team has the same Id mappings. Workflow becomes truly reprod
 
 Suggested patterns:
 
-- `<source-alias>-to-<target-alias>` — `silverchef-to-uat`, `prod-to-fullsandbox`
-- `<deploy-cycle>-<sprint>` — `q1-2026-cycle3`
-- `<purpose>` — `general-enquiry-bindings`, `marketing-channel-mappings`
+- `<source-alias>-to-<target-alias>` - `silverchef-to-uat`, `prod-to-fullsandbox`
+- `<deploy-cycle>-<sprint>` - `q1-2026-cycle3`
+- `<purpose>` - `general-enquiry-bindings`, `marketing-channel-mappings`
 
 Pick a convention and stick to it. Saved maps are flat key-value, no folder hierarchy.
 

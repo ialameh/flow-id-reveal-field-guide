@@ -80,7 +80,7 @@ It is not an Apex / metadata clone tool. System-managed metadata types (ApexClas
 
 ## The picture
 
-![Cross-org Id rot — the lifecycle](diagrams/id-rot-lifecycle.svg)
+![Cross-org Id rot - the lifecycle](diagrams/id-rot-lifecycle.svg)
 
 ## References
 

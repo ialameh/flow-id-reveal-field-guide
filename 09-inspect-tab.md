@@ -117,8 +117,8 @@ Output JSON shows the parts separately.
 
 Two buttons:
 
-- **Open source CMS workspace** — opens `<source-origin>/lightning/setup/CMSExperiences/home` in a new tab
-- **Open target CMS workspace** — opens `<target-origin>/lightning/setup/CMSExperiences/home` in a new tab (requires target tab selected in Compare → Per-Id check)
+- **Open source CMS workspace** - opens `<source-origin>/lightning/setup/CMSExperiences/home` in a new tab
+- **Open target CMS workspace** - opens `<target-origin>/lightning/setup/CMSExperiences/home` in a new tab (requires target tab selected in Compare → Per-Id check)
 
 Use the workspaces UI to:
 

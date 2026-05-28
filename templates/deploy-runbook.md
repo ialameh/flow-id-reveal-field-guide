@@ -23,8 +23,8 @@ Copy this into your deploy ticket. Tick items as you go.
 - [ ] CMS Form helper used to patch source Draft with target content key (if applicable)
 - [ ] Repoint table populated with all target Ids
 - [ ] Map saved to `<source>-to-<target>` for inverse restore later
-- [ ] Pre-deploy validateOnly run against target — PASSED
-- [ ] Target Draft collision check — OK
+- [ ] Pre-deploy validateOnly run against target - PASSED
+- [ ] Target Draft collision check - OK
 - [ ] Stakeholders notified (Slack / email)
 
 ## Deploy

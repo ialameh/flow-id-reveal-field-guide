@@ -17,7 +17,7 @@ Strengths:
 Weaknesses:
 
 - Cost
-- Same Id rot vulnerability — moves the bytes as-is. Patch the source flow first via the extension, then let Gearset ship.
+- Same Id rot vulnerability - moves the bytes as-is. Patch the source flow first via the extension, then let Gearset ship.
 
 ### Change Sets (Salesforce-native)
 
@@ -35,7 +35,7 @@ Weaknesses:
 - Slow (manual upload + deploy click)
 - Same Id rot vulnerability
 
-To ship a Draft via Change Set, you need to activate the Draft in source first (intrusive — see Chapter 13 form-binding constraints), or use a different deploy path.
+To ship a Draft via Change Set, you need to activate the Draft in source first (intrusive - see Chapter 13 form-binding constraints), or use a different deploy path.
 
 ### sfdx CLI / Salesforce CLI
 

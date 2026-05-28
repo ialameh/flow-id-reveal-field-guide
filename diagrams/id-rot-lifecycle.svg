@@ -10,7 +10,7 @@
 
   <rect width="1100" height="600" fill="#f8fafc"/>
 
-  <text x="550" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Cross-org Id rot — the lifecycle</text>
+  <text x="550" y="35" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Cross-org Id rot - the lifecycle</text>
   <text x="550" y="60" text-anchor="middle" font-size="13" fill="#64748b">From hidden Id in Flow Builder to deploy failure to extension-driven fix</text>
 
   <!-- 1. Flow Builder hides the Id -->

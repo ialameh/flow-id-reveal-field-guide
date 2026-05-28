@@ -75,7 +75,7 @@ Symptoms:
 - In-memory caches (`versionCache`, etc.) are lost when the SW reloads
 - No persistent state across SW reloads (use `chrome.storage` for that)
 
-Not a bug. Designed behaviour. The extension is built to tolerate cold SW reloads — every API call resolves the API version freshly if cache is empty.
+Not a bug. Designed behaviour. The extension is built to tolerate cold SW reloads - every API call resolves the API version freshly if cache is empty.
 
 ## DOM scan on large pages
 

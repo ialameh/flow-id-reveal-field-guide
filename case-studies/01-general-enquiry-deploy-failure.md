@@ -1,4 +1,4 @@
-# Case study 01: General Enquiry Form Handler — the originating deploy failure
+# Case study 01: General Enquiry Form Handler - the originating deploy failure
 
 The incident that triggered building the Flow ID Reveal extension. May 2026, a Salesforce sandbox-to-sandbox deploy of a Marketing Cloud Growth Form Submission flow failed with the generic "An unexpected error occurred" message and no actionable detail.
 
@@ -11,7 +11,7 @@ Names and Ids in this case study are real (extracted from the source repo's comm
 - **Flow:** `General Enquiry - AU Form Handler v1 Flow` (label), DefinitionId `300WG00000siVKLYA2`
 - **Deploy artifact:** validation deploy `0AfWF00000Dr5QH` via the team's pipeline ("Pipelines Admin")
 - **Date:** 2026-05-27
-- **Deploy result:** Validation Failed. 1 component error: `flow_5kWq9X89MbMqmcFm` — "An unexpected error occurred. Please include this ErrorId if you contact support: 427833057-64155 (-78598139)"
+- **Deploy result:** Validation Failed. 1 component error: `flow_5kWq9X89MbMqmcFm` - "An unexpected error occurred. Please include this ErrorId if you contact support: 427833057-64155 (-78598139)"
 
 ## What the error looked like
 
@@ -64,7 +64,7 @@ Three sObject Ids + one CMS content key. All from SilverChef (pod code `WG`). Ta
 
 Time spent identifying the Ids: about 30 minutes of XML grepping plus reading.
 Time spent verifying each Id existed in source: 15 minutes (URL-bar pasting in source SF tabs).
-Time spent finding the equivalent target records: indeterminate — different sandbox, different team's CMS setup.
+Time spent finding the equivalent target records: indeterminate - different sandbox, different team's CMS setup.
 
 ## The light-bulb moment
 

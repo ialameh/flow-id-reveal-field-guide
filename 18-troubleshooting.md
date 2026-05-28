@@ -174,7 +174,7 @@ Possible:
 
 - No SF tabs open in any window (open one)
 - All SF tabs are in a different Chrome profile (each profile has separate tabs)
-- The URL pattern is mismatched (the extension supports lightning.force.com, my.salesforce.com, force.com, salesforce.com, salesforce-setup.com, cloudforce.com — if your org uses a different domain, add it to host_permissions)
+- The URL pattern is mismatched (the extension supports lightning.force.com, my.salesforce.com, force.com, salesforce.com, salesforce-setup.com, cloudforce.com - if your org uses a different domain, add it to host_permissions)
 
 ## Source viewer is blank after "Load flow source"
 

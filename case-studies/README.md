@@ -4,7 +4,7 @@ Anonymised real-world incidents that motivated extension features.
 
 | # | Title | Incident type |
 |---|---|---|
-| 01 | [General Enquiry AU Form Handler — the originating deploy failure](01-general-enquiry-deploy-failure.md) | Cross-org Id rot, opaque deploy error |
+| 01 | [General Enquiry AU Form Handler - the originating deploy failure](01-general-enquiry-deploy-failure.md) | Cross-org Id rot, opaque deploy error |
 
 Each case study includes:
 

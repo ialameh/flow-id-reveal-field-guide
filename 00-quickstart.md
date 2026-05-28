@@ -58,9 +58,9 @@ This is where the extension earns its name.
 
 The compare table shows, for each Id:
 
-- **EXISTS** in green — the same Id resolves in target. Either same record or different record with that Id.
-- **MISSING (404)** in red — the Id does not exist in target. Deploy will fail.
-- **ERROR** in amber — something else went wrong (permissions, API version, etc.)
+- **EXISTS** in green - the same Id resolves in target. Either same record or different record with that Id.
+- **MISSING (404)** in red - the Id does not exist in target. Deploy will fail.
+- **ERROR** in amber - something else went wrong (permissions, API version, etc.)
 
 If any Id is MISSING, your flow will not deploy cleanly to that target org. You now know which records to fix.
 
@@ -68,10 +68,10 @@ If any Id is MISSING, your flow will not deploy cleanly to that target org. You 
 
 The **Action** column gives you three buttons:
 
-- **Open source** — opens the record in source org
-- **Open target** — opens the record in target org (if it exists)
-- **Use this Id** — when EXISTS, autofills the Repoint table with target's Id
-- **Clone → target** — when MISSING, auto-creates the record in target by reading source + POST to target via REST + stripping system fields + describe-filtering to createable fields. Autofills the new Id into Repoint.
+- **Open source** - opens the record in source org
+- **Open target** - opens the record in target org (if it exists)
+- **Use this Id** - when EXISTS, autofills the Repoint table with target's Id
+- **Clone → target** - when MISSING, auto-creates the record in target by reading source + POST to target via REST + stripping system fields + describe-filtering to createable fields. Autofills the new Id into Repoint.
 
 ## What you have now
 

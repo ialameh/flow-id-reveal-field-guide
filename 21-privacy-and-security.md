@@ -30,11 +30,11 @@ The extension does not read anything else from Salesforce. It does not query Use
 
 ### To Salesforce (when you explicitly trigger it)
 
-- **PATCH** on `Flow.Metadata` (Tooling API) — Apply patch, CMS Form helper patch, Search/Replace patch
-- **PATCH** on `FlowDefinition.Metadata.activeVersionNumber` — Lifecycle Activate / Deactivate
-- **DELETE** on `Flow` (Tooling API) — Lifecycle Delete Draft
-- **POST** on `<SObject>` (REST API) — Clone → target
-- **SOAP** to `/services/Soap/m/<version>` with `deploy()` — Pre-deploy validate, Cross-org deploy
+- **PATCH** on `Flow.Metadata` (Tooling API) - Apply patch, CMS Form helper patch, Search/Replace patch
+- **PATCH** on `FlowDefinition.Metadata.activeVersionNumber` - Lifecycle Activate / Deactivate
+- **DELETE** on `Flow` (Tooling API) - Lifecycle Delete Draft
+- **POST** on `<SObject>` (REST API) - Clone → target
+- **SOAP** to `/services/Soap/m/<version>` with `deploy()` - Pre-deploy validate, Cross-org deploy
 
 Every write requires an explicit click on a button in the side panel. No silent writes.
 
@@ -86,9 +86,9 @@ Per-permission rationale:
 
 Notably absent:
 
-- `webRequest` / `webRequestBlocking` — the extension does not intercept or modify network traffic outside its own fetches
-- `<all_urls>` — only Salesforce hosts are permitted
-- `bookmarks`, `history`, `geolocation`, `notifications` — none of these are used
+- `webRequest` / `webRequestBlocking` - the extension does not intercept or modify network traffic outside its own fetches
+- `<all_urls>` - only Salesforce hosts are permitted
+- `bookmarks`, `history`, `geolocation`, `notifications` - none of these are used
 
 ## Data minimisation
 
@@ -132,9 +132,9 @@ Before deploying widely in your organisation:
 | Threat | Mitigation |
 |---|---|
 | Malicious script in a Salesforce page injects fake Ids | DOM scan is read-only; consequences limited to confused UI. Apply requires user click. |
-| Compromised Chrome profile reads session cookies | Out of scope — Chrome profile compromise affects all your auth |
+| Compromised Chrome profile reads session cookies | Out of scope - Chrome profile compromise affects all your auth |
 | Compromised extension code (supply chain) | Pin to known-good commit hash. Audit code on each upgrade. |
-| Server-side Salesforce vulnerability | Out of scope — affects all Salesforce API consumers |
+| Server-side Salesforce vulnerability | Out of scope - affects all Salesforce API consumers |
 | Accidental cross-org write (e.g. Apply on production by mistake) | Always read confirm dialogs. Use validate-only for cross-org deploy first. |
 
 ## Compliance

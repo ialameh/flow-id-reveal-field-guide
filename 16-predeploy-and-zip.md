@@ -14,9 +14,9 @@ flows/               # one file per Flow component
 
 The extension builds this in-memory with three pieces of code:
 
-1. **JSON → XML serializer** (`metadataJsonToFlowXml`) — converts the Tooling-API JSON metadata back to MDAPI XML
-2. **Minimal ZIP writer** (`buildSimpleZip`) — RFC 1952 / PKZIP STORE mode, no compression
-3. **Base64 encoder** (`arrayBufferToBase64`) — chunked encode for large buffers
+1. **JSON → XML serializer** (`metadataJsonToFlowXml`) - converts the Tooling-API JSON metadata back to MDAPI XML
+2. **Minimal ZIP writer** (`buildSimpleZip`) - RFC 1952 / PKZIP STORE mode, no compression
+3. **Base64 encoder** (`arrayBufferToBase64`) - chunked encode for large buffers
 
 The resulting base64 string is the `<ZipFile>` value in the SOAP `deploy()` envelope.
 

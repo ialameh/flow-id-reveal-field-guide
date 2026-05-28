@@ -71,8 +71,8 @@ The extension's "Hide unknown prefixes" checkbox (on by default in the Scan tab)
 `looksLikeSfId(s)` returns true if all of:
 
 1. `s.length === 15 || s.length === 18`
-2. `/^[0-9a-zA-Z]+$/.test(s)` — pure alphanumeric
-3. `/\d/.test(s.slice(0, 5))` — at least one digit in the first 5 characters
+2. `/^[0-9a-zA-Z]+$/.test(s)` - pure alphanumeric
+3. `/\d/.test(s.slice(0, 5))` - at least one digit in the first 5 characters
 
 Rule 3 is a heuristic to filter false positives from camelCase identifier names. A real SF Id has the pod code in characters 3-5, which is always alphanumeric and almost always includes digits. A camelCase JavaScript identifier like `engagementChannelT` has no digits in its first 5 chars and is correctly rejected.
 
@@ -86,9 +86,9 @@ The middle two characters (positions 3-4, 0-indexed) are the **pod code**. They 
 
 Examples from real orgs:
 
-- `WG` — SilverChef Omni sandbox
-- `WF` — A SilverChef Omni's UAT sibling sandbox
-- `5g` — Issam's personal Dev Hub (00D5g00000KBtCUEA1)
+- `WG` - SilverChef Omni sandbox
+- `WF` - A SilverChef Omni's UAT sibling sandbox
+- `5g` - Issam's personal Dev Hub (00D5g00000KBtCUEA1)
 
 Two records on the same pod always start with the same two pod-code characters. Two records on different pods do not.
 

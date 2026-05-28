@@ -12,10 +12,10 @@ A table with one row per known Id from the last Scan. Columns: Object, Source Id
 
 Three ways to populate the Target Id column:
 
-1. **Manual paste** — type or paste the target Id into each row
+1. **Manual paste** - type or paste the target Id into each row
 2. **Use this Id** from Compare → Per-Id check on EXISTS rows (autofills)
 3. **Clone → target** from Compare → Per-Id check on MISSING rows (autofills with the new cloned Id)
-4. **Prefill from saved map** — load Ids from a previously-saved org-pair map
+4. **Prefill from saved map** - load Ids from a previously-saved org-pair map
 
 ### Apply patch
 
@@ -36,7 +36,7 @@ If success, `state.flowMetadata` is updated in memory to the patched version. Th
 
 Conspicuous warning under the Apply button:
 
-> Safety: patched Draft is POISONED for source-org runtime — target-org Ids inside. Do NOT activate it in source. Use as Gearset deploy-staging only. After Gearset pushes to target, prefill INVERSE + Apply to restore source Ids, or delete the staging Draft entirely.
+> Safety: patched Draft is POISONED for source-org runtime - target-org Ids inside. Do NOT activate it in source. Use as Gearset deploy-staging only. After Gearset pushes to target, prefill INVERSE + Apply to restore source Ids, or delete the staging Draft entirely.
 
 This is critical. The source Draft after Apply contains target-org Ids that do not resolve in source. If activated in source, every flow run hits 404 on those references and fails.
 
@@ -67,7 +67,7 @@ Generic find-replace across the flow metadata JSON.
 
 Useful for:
 
-- Replacing a CMS content key (after publishing the form in target — see Chapter 15)
+- Replacing a CMS content key (after publishing the form in target - see Chapter 15)
 - Repointing references not covered by the prefix dictionary
 - One-off swaps that do not warrant a Repoint table
 
@@ -141,7 +141,7 @@ Common uses:
 
 Each action shows a confirm dialog. The output panel shows the API response.
 
-## Auto-pin to CMT (v0.4 — suggestion only)
+## Auto-pin to CMT (v0.4 - suggestion only)
 
 The Custom Metadata Type pattern is the long-term fix for cross-org Id rot. Instead of hardcoding `0XlWG0000000Ihh0AE` in the flow, you create a CMT record per environment and the flow looks up the right Id at runtime.
 
@@ -155,10 +155,10 @@ The persistent Id mapping store. Shows the contents of `chrome.storage.local["fi
 
 Buttons:
 
-- **Reload** — re-read from storage
-- **Copy JSON** — copy the map JSON to clipboard
-- **Import from clipboard** — paste map JSON to overwrite the store
-- **Clear all** — wipe the store
+- **Reload** - re-read from storage
+- **Copy JSON** - copy the map JSON to clipboard
+- **Import from clipboard** - paste map JSON to overwrite the store
+- **Clear all** - wipe the store
 
 The map structure:
 

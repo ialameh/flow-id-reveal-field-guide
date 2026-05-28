@@ -53,7 +53,7 @@ The Backup is your last-line rollback. Use it.
 
 ### Rule 3. Never activate the poisoned Draft in source
 
-The extension's confirm dialog warns about this. The visible safety hint under the Apply button warns. But the click is still possible. Train your team. Document the convention in the Draft's description ("STAGING ONLY — DO NOT ACTIVATE").
+The extension's confirm dialog warns about this. The visible safety hint under the Apply button warns. But the click is still possible. Train your team. Document the convention in the Draft's description ("STAGING ONLY - DO NOT ACTIVATE").
 
 If accidentally activated, you have two recovery paths:
 
