@@ -82,6 +82,7 @@ nav:
   - References: REFERENCES.md
   - Verification: VERIFICATION.md
   - Changelog: CHANGELOG.md
+  - Privacy Policy: privacy.md
 
 markdown_extensions:
   - admonition
